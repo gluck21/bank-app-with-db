@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 
@@ -13,12 +14,12 @@ import java.util.List;
 @Entity
 public class Account {
     @Id
-    private Long accountNumber;
-    private AccountType accountType;
+    private String accountNumber;
+    private String accountType;
     private BigInteger balance;
     @OneToMany
     private List<AccountStatement> accountStatementList;
-    private LocalDateTime creatDt;
+    private Date creatDt;
 
 
 }

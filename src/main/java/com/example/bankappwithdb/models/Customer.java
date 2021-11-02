@@ -13,11 +13,12 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(unique = true)
+    private String fullName;
     private String userName;
     private String email;
     private String phoneNumber;
     private String address;
-    private String accountPassword;
+    private String password;
     @OneToOne
     private Account account;
     private Roles roles;
